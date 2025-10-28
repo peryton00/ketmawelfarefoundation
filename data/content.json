@@ -1,0 +1,114 @@
+{
+  "causes": [
+    {
+      "title": "Education for All",
+      "description": "Providing quality education and learning materials to underprivileged children in rural areas.",
+      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+      "category": "Education",
+      "raised": 450000,
+      "goal": 1000000
+    }, 
+    {
+      "title": "Healthcare Access",
+      "description": "Building mobile health clinics and providing essential medical care to remote communities.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+      "category": "Healthcare",
+      "raised": 680000,
+      "goal": 1500000
+    },
+    {
+      "title": "Clean Water Initiative",
+      "description": "Installing water purification systems and wells in communities lacking clean drinking water.",
+      "image": "https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80",
+      "category": "Infrastructure",
+      "raised": 320000,
+      "goal": 800000
+    },
+    {
+      "title": "Women Empowerment",
+      "description": "Skill development programs and vocational training for women to achieve financial independence.",
+      "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80",
+      "category": "Empowerment",
+      "raised": 560000,
+      "goal": 1200000
+    },
+    {
+      "title": "Child Nutrition",
+      "description": "Ensuring proper nutrition and regular meals for malnourished children in underserved areas.",
+      "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+      "category": "Nutrition",
+      "raised": 890000,
+      "goal": 2000000
+    },
+    {
+      "title": "Disaster Relief",
+      "description": "Emergency support and rehabilitation for communities affected by natural disasters.",
+      "image": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80",
+      "category": "Emergency",
+      "raised": 1250000,
+      "goal": 2500000
+    }
+  ],
+  "team": [
+    {
+      "name": "Mr. Ankit Soni",
+      "role": "Founder & Director",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+      "social": {
+        "facebook": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "name": "Mr. Priryansu Soni",
+      "role": "Program Manager",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+      "social": {
+        "facebook": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "name": "Amit Bdhana",
+      "role": "Healthcare Coordinator",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+      "social": {
+        "facebook": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "name": "Vikram Singh",
+      "role": "Education Lead",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+      "social": {
+        "facebook": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Ankit Soni",
+      "position": "Community Leader, Village Panchayat",
+      "text": "Ketma Welfare Foundation has transformed our village. Their education program has given our children hope for a better future. We are forever grateful for their dedication and support.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+    },
+    {
+      "name": "Priyanshu Soni",
+      "position": "Beneficiary, Women Empowerment Program",
+      "text": "Thanks to the vocational training, I now run my own tailoring business and support my family. This organization changed my life and gave me independence I never imagined possible.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+    },
+    {
+      "name": "Dr. Nana Soni",
+      "position": "Healthcare Partner",
+      "text": "Working with Ketma Welfare Foundation has been incredibly rewarding. Their commitment to providing healthcare in remote areas is unmatched. They truly care about making a difference.",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80"
+    }
+  ]
+}
