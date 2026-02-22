@@ -1,0 +1,761 @@
+{
+  "_schema_guide": {
+    "description": "This JSON file is the single source of truth for ALL content on the Ketma Welfare Foundation website. Edit values carefully. Do NOT change key names unless you also update main.js rendering functions.",
+    "keys": {
+      "meta": "Site metadata for SEO, Open Graph, and Twitter cards",
+      "hero": "Main hero banner content — headline, subheadline, CTA buttons",
+      "impactNumbers": "Array of stat objects for the animated impact strip",
+      "about": "About section — paragraphs, pullQuote, imageAlt",
+      "pillars": "Three strategic pillars — icon (emoji/SVG ref), title, description",
+      "workDomains": "10 registered mandates — icon, title, description",
+      "story": "Narrative timeline — intro paragraphs, timeline phases, presidentQuote",
+      "vision": "Vision statement text",
+      "mission": "Array of 7 mission pillars with icon and text",
+      "flagshipInitiative": "3 phases of flagship project + cumulative dashboard metrics",
+      "legalCredentials": "Registration details, Darpan ID, office addresses",
+      "governingCouncil": "Array of council members — name, role, expertise, photo",
+      "csrPartnership": "CSR section — whyPartner points, models, implementationPartners",
+      "governmentEngagement": "Text about government partnership aspirations",
+      "products": "Array of herbal/organic products — name, description, icon",
+      "donate": "Donation tiers, bank details, UPI info, notes",
+      "volunteer": "Volunteer roles array + otherWays list",
+      "pressRelease": "Full press release content + keyMessages bullets",
+      "contact": "Email, phone, addresses, social links, mapEmbed",
+      "footer": "Tagline, quickLinks, legal, social, copyright, disclaimer"
+    }
+  },
+  "meta": {
+    "siteTitle": "Ketma Welfare Foundation — Restoring Earth. Empowering People. Building Tomorrow.",
+    "description": "Ketma Welfare Foundation is a grassroots non-profit based in Ambikapur, Surguja, Chhattisgarh, India — dedicated to environmental restoration, tribal empowerment, and scientific community development since 2012.",
+    "ogTitle": "Ketma Welfare Foundation | From Barren Land to Boundless Futures",
+    "ogDescription": "110 acres restored. 24.2 lakh lemongrass slips planted. ₹70 Lakhs+ invested. Empowering tribal communities through science, systems, and partnership.",
+    "ogImage": "",
+    "twitterCard": "summary_large_image",
+    "keywords": "Ketma Welfare Foundation, NGO Surguja, Chhattisgarh, environmental restoration, tribal empowerment, lemongrass cultivation, organic essential oil, CSR India, rural development, afforestation"
+  },
+  "hero": {
+    "headline": "From Barren Land to Boundless Futures —",
+    "headlineLine2": "Restoring Earth. Empowering People. Building Tomorrow.",
+    "subheadline": "A grassroots institution transforming 110 acres of degraded land into thriving ecosystems — powered by science, community partnership, and unwavering commitment to Surguja's tribal heartland.",
+    "ctaButtons": [
+      {
+        "label": "🌿 Explore Our Work",
+        "target": "#work-domains",
+        "style": "primary",
+        "gtm": "hero_explore_work"
+      },
+      {
+        "label": "❤️ Donate Now",
+        "target": "#donate",
+        "style": "primary",
+        "gtm": "hero_donate"
+      },
+      {
+        "label": "🤝 Partner With Us",
+        "target": "#csr",
+        "style": "secondary",
+        "gtm": "hero_partner"
+      },
+      {
+        "label": "📞 Contact Us",
+        "target": "#contact",
+        "style": "ghost",
+        "gtm": "hero_contact"
+      }
+    ]
+  },
+  "impactNumbers": [
+    {
+      "icon": "🌱",
+      "number": 110,
+      "suffix": "",
+      "label": "Acres of Barren Land Restored",
+      "prefix": ""
+    },
+    {
+      "icon": "🌿",
+      "number": 24.2,
+      "suffix": " Lakh",
+      "label": "Lemongrass Slips Planted",
+      "prefix": ""
+    },
+    {
+      "icon": "💰",
+      "number": 70,
+      "suffix": " Lakhs+",
+      "label": "Personal Investment Before External Funds",
+      "prefix": "₹"
+    },
+    {
+      "icon": "👨‍🌾",
+      "number": 200,
+      "suffix": "+",
+      "label": "Farmers & Labourers Trained",
+      "prefix": ""
+    },
+    {
+      "icon": "📋",
+      "number": 10,
+      "suffix": "",
+      "label": "Registered Work Domains",
+      "prefix": ""
+    },
+    {
+      "icon": "🏭",
+      "number": 1,
+      "suffix": "st",
+      "label": "Organic Essential Oil Unit in Surguja",
+      "prefix": ""
+    },
+    {
+      "icon": "👷",
+      "number": 50,
+      "suffix": "",
+      "label": "Year-Round Workers Employed",
+      "prefix": ""
+    },
+    {
+      "icon": "📅",
+      "number": 2012,
+      "suffix": "",
+      "label": "Year Founded (Revived 2025)",
+      "prefix": "",
+      "isYear": true
+    }
+  ],
+  "about": {
+    "paragraphs": [
+      "Ketma Welfare Foundation (formerly Ketma Paryavaran Sanrakshan Samiti) was established in 2012 in Ambikapur, Surguja district, Chhattisgarh — one of India's most ecologically sensitive and tribally significant regions. After a decade of foundational environmental work, the organization was formally revived, restructured, and re-registered in 2025 under the visionary leadership of President Mr. Ankit Soni, a Mining Engineer with deep expertise in remote sensing, geospatial analysis, and environmental science.",
+      "What makes Ketma different is not just its mission — it's the investment behind it. Before ever seeking a single rupee of external funding, the founding team invested over ₹70 Lakhs of personal capital into land restoration, lemongrass cultivation, distillation infrastructure, and community training. This is not a proposal-driven NGO — this is a results-first institution that has already built the proof of concept with its own hands and resources.",
+      "Today, Ketma operates across 10 formally registered domains — from environmental conservation and organic agriculture to women's empowerment, tribal welfare, public health, education, disaster management, and CSR facilitation. Its integrated model treats ecology, livelihood, and community dignity as inseparable — because they are."
+    ],
+    "pullQuote": "Our commitment to community and environment is unconditional — not transactional.",
+    "imageAlt": "Illustrated map of Surguja region showing Ketma's impact areas across Ambikapur and surrounding tribal communities"
+  },
+  "pillars": [
+    {
+      "icon": "earth",
+      "title": "Restore the Earth",
+      "description": "Systematic land rehabilitation through scientific soil analysis (RUSLE model), contour farming, afforestation, and lemongrass cultivation. We don't just plant — we engineer ecosystems that heal degraded land and prevent future erosion."
+    },
+    {
+      "icon": "people",
+      "title": "Empower the People",
+      "description": "Women-led Mahila Samitis, tribal livelihood programs, skill development, and SHG formation. We build human capacity so communities own their transformation — not depend on it."
+    },
+    {
+      "icon": "building",
+      "title": "Build Tomorrow",
+      "description": "From Surguja's first organic essential oil distillation unit to herbal product lines and enterprise development — we create institutions, systems, and market linkages that sustain beyond any single project cycle."
+    }
+  ],
+  "workDomains": {
+    "sectionTitle": "10 Registered Mandates. One Unified Mission.",
+    "domains": [
+      {
+        "icon": "tree",
+        "title": "Environmental Conservation & Afforestation",
+        "description": "Scientific land restoration, anti-erosion measures, biodiversity conservation, and large-scale afforestation programs."
+      },
+      {
+        "icon": "leaf",
+        "title": "Sustainable & Organic Agriculture",
+        "description": "Promoting organic farming practices, lemongrass cultivation, and chemical-free agriculture across tribal communities."
+      },
+      {
+        "icon": "health",
+        "title": "Public Health & Community Medicine",
+        "description": "Health awareness campaigns, herbal medicine promotion, and community health infrastructure development."
+      },
+      {
+        "icon": "women",
+        "title": "Women's Empowerment & SHG Development",
+        "description": "Formation of Mahila Samitis, self-help groups, skill training, and women-led enterprise creation."
+      },
+      {
+        "icon": "tribal",
+        "title": "Tribal Development & Indigenous Welfare",
+        "description": "Culturally sensitive programs for tribal upliftment, preserving indigenous knowledge while enabling modern opportunities."
+      },
+      {
+        "icon": "enterprise",
+        "title": "Rural Enterprise & Livelihood Generation",
+        "description": "Farm-to-market value chains, essential oil production, herbal products, and sustainable livelihood creation."
+      },
+      {
+        "icon": "education",
+        "title": "Education & Skill Development",
+        "description": "Vocational training, digital literacy, agricultural education, and capacity building for rural youth."
+      },
+      {
+        "icon": "disaster",
+        "title": "Disaster Management & Relief",
+        "description": "Community preparedness, emergency response systems, and resilience building for climate-vulnerable populations."
+      },
+      {
+        "icon": "csr",
+        "title": "CSR Facilitation & Institutional Linkage",
+        "description": "Structured CSR implementation partnerships, impact measurement, and institutional bridge-building."
+      },
+      {
+        "icon": "research",
+        "title": "Research, Documentation & Awareness",
+        "description": "Scientific research (RUSLE modeling), impact documentation, and public awareness campaigns."
+      }
+    ]
+  },
+  "story": {
+    "introParagraphs": [
+      "The story of Ketma is not one of overnight transformation — it is a story of patient, persistent, science-driven commitment to a land and its people.",
+      "It began in 2012, when a group of environmentally conscious individuals in Ambikapur recognized that Surguja's vast tracts of barren, eroded land were not hopeless — they were untapped potential. What they needed was not charity, but science, systems, and someone willing to invest before asking others to believe."
+    ],
+    "timeline": [
+      {
+        "year": "2012",
+        "title": "Foundation Established",
+        "description": "Ketma Paryavaran Sanrakshan Samiti registered in Ambikapur, Surguja, Chhattisgarh — focused on environmental conservation and community development in one of India's most ecologically fragile tribal regions."
+      },
+      {
+        "year": "2012–2023",
+        "title": "A Decade of Groundwork",
+        "description": "Over ten years of foundational environmental work — land surveys, community relationship building, understanding soil degradation patterns, and developing the scientific framework for large-scale restoration."
+      },
+      {
+        "year": "2023–2024",
+        "title": "The Bold Investment",
+        "description": "Founding team invests ₹70 Lakhs+ of personal capital into land restoration, lemongrass cultivation across 110 acres, establishment of Surguja's first organic essential oil distillation unit, and comprehensive community training programs."
+      },
+      {
+        "year": "July 2025",
+        "title": "Formal Revival & Amendment",
+        "description": "Organization formally restructured and renamed as Ketma Welfare Foundation. Registrar Amendment Order issued 31 July 2025, expanding scope to 10 registered domains under the visionary leadership of President Mr. Ankit Soni."
+      },
+      {
+        "year": "September 2025",
+        "title": "Darpan Registration & National Recognition",
+        "description": "NGO Darpan registration secured — ID: CG/2025/0801889 — marking Ketma's formal entry into the national ecosystem of recognized development organizations. 80G application initiated."
+      },
+      {
+        "year": "2025 & Beyond",
+        "title": "Scaling Impact",
+        "description": "Launching herbal product lines, expanding CSR partnerships, government engagement, and preparing to scale the proven model across Chhattisgarh and beyond."
+      }
+    ],
+    "presidentQuote": {
+      "text": "Surguja's barren land is not a liability — it is an opportunity. The tribal communities here are not in need of charity — they need science, systems, and partnership.",
+      "author": "Mr. Ankit Soni",
+      "designation": "President, Ketma Welfare Foundation"
+    }
+  },
+  "vision": {
+    "text": "To transform Surguja into a model district where ecological restoration, tribal empowerment, and sustainable enterprise converge — proving that India's most marginalized landscapes and communities can lead the nation's green future when given science, systems, and respect."
+  },
+  "mission": {
+    "intro": "Our mission is anchored in seven interconnected pillars — because lasting change requires nothing less than a complete ecosystem of action.",
+    "pillars": [
+      {
+        "icon": "🌍",
+        "title": "Ecological Restoration",
+        "text": "Rehabilitate degraded land through scientific methods, afforestation, and sustainable agriculture — restoring both soil and hope."
+      },
+      {
+        "icon": "👩‍🌾",
+        "title": "Community Empowerment",
+        "text": "Build the capacity of tribal and rural communities — especially women — to lead their own transformation through skills, enterprise, and self-governance."
+      },
+      {
+        "icon": "🔬",
+        "title": "Scientific Rigor",
+        "text": "Apply research-grade methodologies (RUSLE modeling, geospatial analysis, soil science) to every intervention — because impact without measurement is just activity."
+      },
+      {
+        "icon": "🏪",
+        "title": "Enterprise Development",
+        "text": "Create farm-to-market value chains, organic product lines, and sustainable businesses that generate lasting livelihoods — not temporary jobs."
+      },
+      {
+        "icon": "🏥",
+        "title": "Health & Education",
+        "text": "Advance public health awareness, herbal medicine access, educational opportunity, and digital literacy in underserved communities."
+      },
+      {
+        "icon": "🤝",
+        "title": "Institutional Partnerships",
+        "text": "Bridge communities with government programs, CSR partners, research institutions, and markets — creating an ecosystem of support."
+      },
+      {
+        "icon": "📊",
+        "title": "Accountability & Transparency",
+        "text": "Maintain rigorous documentation, impact measurement, and financial transparency — because trust is earned with evidence, not promises."
+      }
+    ]
+  },
+  "flagshipInitiative": {
+    "sectionTitle": "The Flagship Initiative: Green Land, Green Futures",
+    "sectionSubtitle": "What becomes possible when science, community, and determination converge.",
+    "phases": [
+      {
+        "phaseNumber": 1,
+        "title": "Land Restoration & Lemongrass Cultivation",
+        "description": "The foundation of everything — turning barren, eroded land into productive, living ecosystems.",
+        "bullets": [
+          "24.2 lakh lemongrass slips planted across 110 acres of previously barren land",
+          "Scientific soil analysis using the RUSLE (Revised Universal Soil Loss Equation) model to map erosion patterns and design interventions",
+          "Contour farming techniques implemented to prevent soil erosion and optimize water retention",
+          "Mahila Samitis (women's collectives) formed and trained for cultivation, harvesting, and land management",
+          "Biodiversity restoration — lemongrass cultivation stabilizes soil while creating habitat corridors",
+          "Employment generated for 200+ farmers and agricultural labourers during cultivation phases"
+        ]
+      },
+      {
+        "phaseNumber": 2,
+        "title": "Organic Essential Oil Production — Surguja's First",
+        "description": "From raw lemongrass to pure essential oil — building Surguja's first organic distillation infrastructure.",
+        "bullets": [
+          "Established the first organic essential oil distillation unit in Surguja district",
+          "Complete farm-to-bottle production chain — cultivation, harvesting, distillation, quality testing, packaging",
+          "10–12 year-round workers employed in distillation and processing operations",
+          "Household income improvement for participating farming families",
+          "Quality control protocols ensuring organic certification standards",
+          "Training programs for community members in distillation technology and quality management"
+        ]
+      },
+      {
+        "phaseNumber": 3,
+        "title": "Value Addition, Product Development & Market Integration",
+        "description": "Transforming raw materials into market-ready products — and building the enterprise ecosystem to sustain it all.",
+        "bullets": [
+          "Diversified product line: essential oil, room fresheners, agarbatti, organic soaps, floor cleaners, insect repellent, herbal teas",
+          "Women-led enterprise development — Mahila Samitis trained in production, packaging, and quality control",
+          "Market integration through local, regional, and online channels",
+          "Government engagement for institutional procurement and policy support",
+          "Preparation for national scaling — replicable model documentation and partnership framework",
+          "Every product traceable to restored land and community producers"
+        ]
+      }
+    ],
+    "cumulativeDashboard": {
+      "title": "Cumulative Impact Dashboard",
+      "metrics": [
+        {
+          "label": "Land Restored",
+          "value": "110 Acres"
+        },
+        {
+          "label": "Lemongrass Planted",
+          "value": "24.2 Lakh Slips"
+        },
+        {
+          "label": "Personal Investment",
+          "value": "₹70 Lakhs+"
+        },
+        {
+          "label": "Community Members Trained",
+          "value": "200+"
+        },
+        {
+          "label": "Year-Round Employment",
+          "value": "50+ Workers"
+        },
+        {
+          "label": "Product Lines Developed",
+          "value": "7 Products"
+        },
+        {
+          "label": "Women's Collectives Formed",
+          "value": "Multiple Samitis"
+        },
+        {
+          "label": "Distillation Units",
+          "value": "1st in Surguja"
+        }
+      ]
+    }
+  },
+  "legalCredentials": {
+    "sectionTitle": "Legal Identity & Credentials",
+    "credentials": [
+      {
+        "label": "Registration Act",
+        "value": "Chhattisgarh Society Registration Act 1973 (Amended 1998)"
+      },
+      {
+        "label": "Registration Number",
+        "value": "17282"
+      },
+      {
+        "label": "NGO Darpan ID",
+        "value": "CG/2025/0801889 (September 2025)"
+      },
+      {
+        "label": "Registrar Amendment Order",
+        "value": "31 July 2025"
+      },
+      {
+        "label": "Registered Office",
+        "value": "Ambikapur, Surguja, Chhattisgarh"
+      },
+      {
+        "label": "Branch Office",
+        "value": "Naya Raipur, Chhattisgarh"
+      },
+      {
+        "label": "80G Tax Exemption",
+        "value": "Application In Progress"
+      },
+      {
+        "label": "Former Name",
+        "value": "Ketma Paryavaran Sanrakshan Samiti"
+      }
+    ]
+  },
+  "governingCouncil": {
+    "sectionTitle": "Governing Council",
+    "intro": "A multidisciplinary council — Mining Engineers, Remote Sensing experts, geologists, social workers, entrepreneurs, and development professionals.",
+    "members": [
+      {
+        "name": "Mr. Ankit Soni",
+        "role": "President",
+        "expertise": "Mining Engineer | Remote Sensing & GIS | Environmental Science | Geospatial Analysis",
+        "photo": ""
+      },
+      {
+        "name": "Mr. Rajesh Kumar Gupta",
+        "role": "Vice President",
+        "expertise": "Community Development | Rural Administration | Institutional Management",
+        "photo": ""
+      },
+      {
+        "name": "Mrs. Savitri Soni",
+        "role": "Secretary",
+        "expertise": "Social Work | Women's Empowerment | Community Health | SHG Development",
+        "photo": ""
+      },
+      {
+        "name": "Mr. Deepak Agrawal",
+        "role": "Treasurer",
+        "expertise": "Financial Management | Business Administration | Rural Enterprise Development",
+        "photo": ""
+      },
+      {
+        "name": "Mr. Vikram Singh Thakur",
+        "role": "Member",
+        "expertise": "Geology | Mining | Environmental Impact Assessment | Land Rehabilitation",
+        "photo": ""
+      },
+      {
+        "name": "Mrs. Anita Pandey",
+        "role": "Member",
+        "expertise": "Education | Skill Development | Youth Programs | Digital Literacy",
+        "photo": ""
+      },
+      {
+        "name": "Mr. Suresh Patel",
+        "role": "Member",
+        "expertise": "Organic Agriculture | Sustainable Farming | Market Linkages | Value Chain Development",
+        "photo": ""
+      }
+    ]
+  },
+  "csrPartnership": {
+    "sectionTitle": "Partner With Purpose. Measure Every Rupee of Impact.",
+    "intro": "Ketma Welfare Foundation offers corporates a rare opportunity — a ground-verified, results-first implementation partner with proven infrastructure, community trust, and scientific methodology.",
+    "whyPartner": [
+      {
+        "icon": "✅",
+        "title": "Proven Track Record",
+        "description": "₹70 Lakhs+ self-invested before seeking external support — we build proof, not proposals."
+      },
+      {
+        "icon": "📊",
+        "title": "Measurable Impact",
+        "description": "Every intervention documented with scientific data, geospatial evidence, and community metrics. Your CSR report writes itself."
+      },
+      {
+        "icon": "🌍",
+        "title": "Multi-Domain Coverage",
+        "description": "10 registered domains mean your CSR can address environment, livelihood, health, education, women's empowerment, and tribal welfare — all through one trusted partner."
+      },
+      {
+        "icon": "🏗️",
+        "title": "Existing Infrastructure",
+        "description": "Distillation unit, 110 acres of cultivated land, trained community workforce, and established supply chains — ready for scale, not starting from scratch."
+      },
+      {
+        "icon": "🤝",
+        "title": "Community Trust",
+        "description": "Over a decade of relationship-building with tribal communities, local governance, and agricultural networks in Surguja."
+      }
+    ],
+    "models": [
+      {
+        "title": "Project Sponsorship",
+        "description": "Fund a specific initiative — land restoration, distillation expansion, product line development, or community training program — with full impact reporting."
+      },
+      {
+        "title": "Long-Term Partnership",
+        "description": "Multi-year CSR engagement across multiple domains with quarterly reporting, site visits, and co-branded impact communications."
+      },
+      {
+        "title": "Product & Market Support",
+        "description": "Support the organic product line through corporate procurement, distribution partnerships, or retail channel access."
+      },
+      {
+        "title": "Skill & Capacity Building",
+        "description": "Fund vocational training, digital literacy programs, or agricultural technology transfer for tribal youth and women."
+      }
+    ],
+    "implementationPartners": [
+      {
+        "name": "Maa Mahamaya Herbal",
+        "description": "Herbal product manufacturing and quality assurance partner"
+      },
+      {
+        "name": "Mahamaya Agro Business",
+        "description": "Agricultural supply chain and market linkage partner"
+      }
+    ]
+  },
+  "governmentEngagement": {
+    "sectionTitle": "Government Engagement",
+    "paragraphs": [
+      "Ketma Welfare Foundation is actively positioning itself as a credible, science-driven implementation partner for government programs in Chhattisgarh. With formal registration, NGO Darpan credentials, and a proven model of land restoration and community development, the Foundation seeks to collaborate with district and state administration on flagship programs.",
+      "Our expertise in environmental science, geospatial analysis, organic agriculture, and tribal community engagement makes us uniquely qualified to implement schemes under MGNREGA convergence, National Afforestation Programme, PM-KUSUM, Tribal Sub-Plan, and various state-level livelihood missions.",
+      "We believe the most effective government programs are those implemented by organizations that already have community trust, local infrastructure, and scientific methodology — and Ketma offers all three."
+    ]
+  },
+  "products": {
+    "sectionTitle": "Our Products — From the Heart of Surguja",
+    "tagline": "Pure · Organic · Community-Made · Eco-Conscious",
+    "items": [
+      {
+        "name": "Lemongrass Essential Oil",
+        "description": "Pure, organic essential oil distilled from lemongrass grown on restored land. Therapeutic grade, chemical-free, and traceable to the field it grew in.",
+        "icon": "oil"
+      },
+      {
+        "name": "Organic Room Freshener",
+        "description": "Natural lemongrass-based room freshener — no synthetic fragrances, no aerosol propellants. Just pure, uplifting aroma from Surguja's fields.",
+        "icon": "spray"
+      },
+      {
+        "name": "Incense Sticks (Agarbatti)",
+        "description": "Hand-crafted incense sticks infused with lemongrass and natural herbs. Made by Mahila Samiti members using traditional techniques.",
+        "icon": "incense"
+      },
+      {
+        "name": "Organic Soap",
+        "description": "Cold-processed organic soap enriched with lemongrass essential oil. Gentle on skin, kind to the earth, made by community women.",
+        "icon": "soap"
+      },
+      {
+        "name": "Organic Floor Cleaner",
+        "description": "Chemical-free floor cleaning solution powered by lemongrass extract. Effective, eco-friendly, and naturally antibacterial.",
+        "icon": "cleaner"
+      },
+      {
+        "name": "Natural Insect Repellent",
+        "description": "Lemongrass-based insect repellent — DEET-free, safe for families, and effective against mosquitoes and common insects.",
+        "icon": "shield"
+      },
+      {
+        "name": "Herbal Tea",
+        "description": "Refreshing lemongrass herbal tea — naturally caffeine-free, rich in antioxidants, and sourced directly from organic farms.",
+        "icon": "tea"
+      }
+    ],
+    "bottomNote": "Every product grows on land we restored. Crafted by Mahila Samitis. Every purchase funds community development."
+  },
+  "donate": {
+    "sectionTitle": "Donate — Invest in a Living Future",
+    "intro": "Your contribution doesn't just fund a project — it grows into restored land, trained hands, empowered women, and sustainable enterprise. Every rupee is accountable, every impact is measurable.",
+    "tiers": [
+      {
+        "amount": "₹500",
+        "impact": "Plants 50 lemongrass slips on barren land",
+        "icon": "🌱"
+      },
+      {
+        "amount": "₹2,000",
+        "impact": "Trains one farmer in organic cultivation techniques",
+        "icon": "👨‍🌾"
+      },
+      {
+        "amount": "₹25,000",
+        "impact": "Restores one acre of barren land with full ecosystem design",
+        "icon": "🌍"
+      },
+      {
+        "amount": "₹1,00,000",
+        "impact": "Sponsors a complete Phase initiative — from soil to product",
+        "icon": "🏗️"
+      }
+    ],
+    "bankDetails": {
+      "bankName": "Centurion Bank Of India",
+      "accountName": "Ketma Welfare Foundation",
+      "accountNumber": "5903560664",
+      "ifsc": "CBIN0282526",
+      "branch": "Nemnakala, Surguja, Chhattisgarh"
+    },
+    "upi": {
+      "id": "To be updated soon",
+      "qrCode": ""
+    },
+    "taxNote": "All donations eligible for 80G tax exemption (application in progress).",
+    "transparencyNote": "We publish detailed impact reports for every contribution. Ask us for our latest utilization certificate."
+  },
+  "volunteer": {
+    "sectionTitle": "Volunteer With Us",
+    "intro": "Volunteers are not helpers — they are co-creators.",
+    "roles": [
+      {
+        "title": "Field Volunteers",
+        "description": "Join our ground teams in Surguja for land restoration, community engagement, and agricultural programs. Minimum 2-week commitment.",
+        "icon": "🌾"
+      },
+      {
+        "title": "Technical Experts",
+        "description": "GIS analysts, soil scientists, agronomists, and environmental engineers — contribute your expertise to our scientific methodologies.",
+        "icon": "🔬"
+      },
+      {
+        "title": "Communications & Design",
+        "description": "Help us tell Surguja's story — content writers, photographers, videographers, and graphic designers needed.",
+        "icon": "📸"
+      },
+      {
+        "title": "Legal & Financial Advisors",
+        "description": "Pro bono support for 80G certification, FCRA application, compliance, and financial structuring.",
+        "icon": "⚖️"
+      },
+      {
+        "title": "Market & Business Development",
+        "description": "Help our organic products reach wider markets — retail partnerships, e-commerce, branding, and supply chain expertise.",
+        "icon": "📈"
+      },
+      {
+        "title": "Digital & Technology",
+        "description": "Web development, app development, data management, and digital literacy training for community members.",
+        "icon": "💻"
+      }
+    ],
+    "otherWays": [
+      "Share our story on social media and with your network",
+      "Introduce us to potential CSR partners or corporate sponsors",
+      "Purchase our organic products and gift them to friends",
+      "Write about Surguja's transformation in your publication or blog",
+      "Organize a fundraising event in your community or workplace",
+      "Provide mentorship to our community entrepreneurs and SHG leaders"
+    ]
+  },
+  "pressRelease": {
+    "header": "FOR IMMEDIATE RELEASE",
+    "headline": "Ketma Welfare Foundation Emerges as Surguja's Most Ambitious Grassroots Restoration Initiative — 110 Acres Restored, 24.2 Lakh Lemongrass Slips Planted, ₹70 Lakhs Self-Invested",
+    "dateline": "AMBIKAPUR, CHHATTISGARH — October 2025",
+    "body": [
+      "Ketma Welfare Foundation, a restructured and revitalized non-profit organization based in Ambikapur, Surguja district, Chhattisgarh, today announced its formal re-emergence as one of the region's most comprehensive grassroots institutions for environmental restoration, tribal empowerment, and sustainable development.",
+      "Originally established in 2012 as Ketma Paryavaran Sanrakshan Samiti, the organization has undergone a complete structural transformation in 2025 under the leadership of President Mr. Ankit Soni — a Mining Engineer with expertise in remote sensing, geospatial analysis, and environmental science. The organization's scope has been expanded to cover 10 formally registered domains, and its Darpan registration (ID: CG/2025/0801889) marks its entry into the national ecosystem of recognized development organizations.",
+      "The Foundation's flagship initiative — 'Green Land, Green Futures' — has already achieved remarkable milestones: 110 acres of barren, eroded land transformed through scientific soil analysis (RUSLE model) and lemongrass cultivation, with 24.2 lakh slips planted. The team has established Surguja district's first organic essential oil distillation unit, created a complete farm-to-bottle production chain, and developed a diversified product line including essential oils, room fresheners, incense sticks, organic soaps, and herbal teas.",
+      "What distinguishes Ketma from conventional NGOs is its investment model — the founding team has invested over ₹70 Lakhs of personal capital into infrastructure, cultivation, and community training before seeking any external funding. This results-first approach has built genuine community trust and created a replicable model for other regions.",
+      "The Foundation now seeks strategic CSR partnerships, government collaboration, and community support to scale its proven model across Chhattisgarh and beyond."
+    ],
+    "mediaContact": {
+      "name": "Mr. Ankit Soni",
+      "designation": "President, Ketma Welfare Foundation",
+      "phone": "+91-9826948770",
+      "email": "support@ketmawelfarefoundation.org"
+    },
+    "keyMessages": [
+      "110 acres of barren land restored using scientific RUSLE soil erosion modeling",
+      "24.2 lakh lemongrass slips planted — creating both ecological and economic value",
+      "₹70 Lakhs+ personally invested before seeking external funding — proof-first approach",
+      "Surguja's first organic essential oil distillation unit established and operational",
+      "200+ farmers and labourers trained; 10–12 year-round workers employed",
+      "10 formally registered domains covering environment, health, education, tribal welfare, and enterprise",
+      "NGO Darpan registered: CG/2025/0801889 | Society Registration No. 17282",
+      "Women-led Mahila Samitis at the heart of production and community governance",
+      "Diversified organic product line: essential oils, soaps, fresheners, teas, agarbatti, cleaners",
+      "Open for CSR partnerships, government collaboration, and volunteer engagement"
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Get In Touch",
+    "intro": "Whether you're a CSR professional, government official, journalist, volunteer, or supporter — we'd love to hear from you.",
+    "email": "support@ketmawelfarefoundation.org",
+    "phone": "+91-9826948770",
+    "whatsappMessage": "Hello Ketma Welfare Foundation, I'd like to know more about...",
+    "addresses": [
+      {
+        "type": "Registered Office",
+        "address": "Ambikapur, Surguja, Chhattisgarh, India"
+      },
+      {
+        "type": "Branch Office",
+        "address": "Naya Raipur, Chhattisgarh, India"
+      }
+    ],
+    "socialLinks": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#",
+      "youtube": "#"
+    },
+    "formSubjects": [
+      "General Inquiry",
+      "CSR Partnership",
+      "Donation Query",
+      "Volunteering",
+      "Media / Press",
+      "Government Collaboration",
+      "Product Inquiry",
+      "Other"
+    ],
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58774.55865498767!2d83.15!3d23.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3988e2d0c9da1b0f%3A0x3e4c7b8f9bd7e34a!2sAmbikapur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+  },
+  "footer": {
+    "tagline": "Restoring Earth. Empowering People. Building Tomorrow.",
+    "quickLinks": [
+      {
+        "label": "About Us",
+        "href": "#about"
+      },
+      {
+        "label": "Our Work",
+        "href": "#work-domains"
+      },
+      {
+        "label": "Our Story",
+        "href": "#story"
+      },
+      {
+        "label": "CSR Partners",
+        "href": "#csr"
+      },
+      {
+        "label": "Products",
+        "href": "#products"
+      },
+      {
+        "label": "Donate",
+        "href": "#donate"
+      },
+      {
+        "label": "Volunteer",
+        "href": "#volunteer"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "legal": {
+      "regAct": "Chhattisgarh Society Registration Act 1973 (Amended 1998)",
+      "regNumber": "17282",
+      "darpanId": "CG/2025/0801889"
+    },
+    "copyright": "© 2026 Ketma Welfare Foundation. All rights reserved.",
+    "disclaimer": "Registered under Chhattisgarh Society Registration Act 1973 (Amended 1998). NGO Darpan ID: CG/2025/0801889."
+  }
+}

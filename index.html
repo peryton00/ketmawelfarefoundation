@@ -1,466 +1,785 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ketma Welfare Foundation - Making a difference in communities through compassion and action">
-    <title>Ketma Welfare Foundation | Empowering Communities</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="heart-pulse">
-                <i class="fas fa-heart"></i>
-            </div>
-            <p>Loading...</p>
-        </div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <i class="fas fa-hands-helping"></i>
-                    <span>Ketma Welfare Foundation</span>
-                </div>
-                <div class="menu-toggle" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
-                    <li><a href="#causes" class="nav-link">Our Causes</a></li>
-                    <li><a href="#impact" class="nav-link">Impact</a></li>
-                    <li><a href="#team" class="nav-link">Team</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#donate" class="btn-donate">Donate Now</a></li>
-                </ul>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://ketmawelfarefoundation.org/">
+
+  <!-- JSON-LD Schema (Advanced Ranking Support) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Ketma Welfare Foundation",
+      "alternateName": "KWF",
+      "url": "https://ketmawelfarefoundation.org/",
+      "logo": "https://ketmawelfarefoundation.org/assets/logo/logo-transparent.png",
+      "description": "Ketma Welfare Foundation is a grassroots non-profit dedicated to environmental restoration and tribal empowerment in India.",
+      "foundingDate": "2012",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ambikapur",
+        "addressRegion": "Chhattisgarh",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-6268846383",
+        "contactType": "general info",
+        "email": "ketmawelfare@gmail.com",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/ketmawelfare",
+        "https://twitter.com/ketmawelfare",
+        "https://www.instagram.com/ketmawelfare"
+      ]
+    }
+  </script>
+
+  <!-- SEO Meta Tags (updated dynamically from JSON) -->
+  <title>Ketma Welfare Foundation — Restoring Earth. Empowering People. Building Tomorrow.</title>
+  <meta name="description"
+    content="Ketma Welfare Foundation is a grassroots non-profit based in Ambikapur, Surguja, Chhattisgarh, India — dedicated to environmental restoration, tribal empowerment, and scientific community development since 2012.">
+  <meta name="keywords"
+    content="Ketma Welfare Foundation, NGO Surguja, Chhattisgarh, environmental restoration, tribal empowerment, lemongrass cultivation, organic essential oil, CSR India, rural development, afforestation">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ketma Welfare Foundation | From Barren Land to Boundless Futures">
+  <meta property="og:description"
+    content="110 acres restored. 24.2 lakh lemongrass slips planted. ₹70 Lakhs+ invested. Empowering tribal communities through science, systems, and partnership.">
+  <meta property="og:image" content="assets/logo/logo-transparent.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ketma Welfare Foundation | From Barren Land to Boundless Futures">
+  <meta name="twitter:description"
+    content="110 acres restored. 24.2 lakh lemongrass slips planted. ₹70 Lakhs+ invested. Empowering tribal communities through science, systems, and partnership.">
+
+  <!-- Favicon (inline SVG leaf) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/logo-transparent.png">
+  <link rel="apple-touch-icon" href="assets/logo/logo-transparent.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#2C473E',
+            'brand-green': '#6A8E4E',
+            'brand-light': '#B0D182',
+            'brand-cream': '#F4F1EA',
+            'brand-dark-95': 'rgba(44, 71, 62, 0.95)',
+          },
+          fontFamily: {
+            'display': ['Syne', 'sans-serif'],
+            'body': ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-body bg-brand-cream text-brand-dark overflow-x-hidden">
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loading-screen"
+    class="fixed inset-0 z-[9999] flex items-center justify-center bg-brand-dark transition-opacity duration-700"
+    aria-label="Loading">
+    <div class="text-center">
+      <div class="loading-leaf-icon mb-6">
+        <img src="assets/logo/logo-transparent.png" alt="Ketma Logo"
+          class="w-80 h-80 mx-auto animate-pulse object-contain scale-120" loading="lazy">
+      </div>
+      <p class="text-brand-light font-display text-2xl tracking-wider loading-text">KETMA</p>
+      <div class="mt-4 w-48 h-1 bg-brand-dark rounded-full mx-auto overflow-hidden">
+        <div class="loading-bar h-full bg-brand-green rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COOKIE NOTICE ===== -->
+  <div id="cookie-notice"
+    class="fixed bottom-0 left-0 right-0 z-[100] transform translate-y-full transition-transform duration-500 hidden">
+    <div class="bg-brand-dark border-t-2 border-brand-green px-6 py-4">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-brand-cream text-sm font-body">
+          We use cookies to enhance your browsing experience. By continuing to visit this site you agree to our use of
+          cookies.
+        </p>
+        <div class="flex gap-3 shrink-0">
+          <button id="cookie-accept"
+            class="px-5 py-2 bg-brand-green text-brand-cream text-sm font-semibold rounded-xl hover:bg-brand-light hover:text-brand-dark transition-all"
+            data-gtm="cookie_accept">Accept</button>
+          <button id="cookie-dismiss"
+            class="px-5 py-2 border border-brand-light text-brand-light text-sm font-semibold rounded-xl hover:bg-brand-light hover:text-brand-dark transition-all"
+            data-gtm="cookie_dismiss">Dismiss</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHATSAPP FLOATING CTA ===== -->
+  <a id="whatsapp-cta" href="#" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 left-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform opacity-0 pointer-events-none"
+    aria-label="Chat on WhatsApp" data-gtm="whatsapp_float">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top"
+    class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-brand-green text-brand-cream rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-brand-dark hover:scale-110"
+    aria-label="Back to top" data-gtm="back_to_top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ===== STICKY NAVIGATION ===== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-[90] transition-all duration-500">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group" aria-label="Ketma Welfare Foundation - Home">
+        <img id="nav-logo" src="assets/logo/logo-transparent.png" alt="Ketma Logo"
+          class="w-[68px] h-[68px] transition-transform duration-300 group-hover:scale-105 object-contain scale-100">
+        <span class="font-display text-lg tracking-wider hidden sm:block nav-logo-text">KETMA</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul id="nav-links" class="hidden lg:flex items-center gap-1">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#work-domains" class="nav-link" data-section="work-domains">Our Work</a></li>
+        <li><a href="#story" class="nav-link" data-section="story">Our Story</a></li>
+        <li><a href="#csr" class="nav-link" data-section="csr">CSR</a></li>
+        <li><a href="#products" class="nav-link" data-section="products">Products</a></li>
+        <li><a href="#donate" class="nav-link nav-link-donate" data-section="donate">Donate</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Language Toggle Placeholder -->
+      <div class="hidden lg:flex items-center gap-3">
+        <button id="lang-toggle"
+          class="lang-toggle-btn text-xs font-semibold px-3 py-1 rounded-full border border-brand-light text-brand-light hover:bg-brand-light hover:text-brand-dark transition-all"
+          aria-label="Toggle language">
+          EN | हिं
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center"
+        aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger-line hamburger-line-1"></span>
+        <span class="hamburger-line hamburger-line-2"></span>
+        <span class="hamburger-line hamburger-line-3"></span>
+      </button>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="container">
-                <div class="hero-text">
-                    <h1 class="hero-title animate-fade-in">
-                        Empowering Lives,<br>
-                        <span class="highlight">Transforming Communities</span>
-                    </h1>
-                    <p class="hero-subtitle animate-fade-in-delay">
-                        Join us in making a lasting impact on the lives of those who need it most
-                    </p>
-                    <div class="hero-buttons animate-fade-in-delay-2">
-                        <a href="#causes" class="btn btn-primary">
-                            <span>Explore Our Causes</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#about" class="btn btn-secondary">
-                            <span>Learn More</span>
-                            <i class="fas fa-play-circle"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="lg:hidden fixed inset-0 top-16 bg-brand-dark z-[80] transform translate-x-full transition-transform duration-400 ease-in-out">
+      <ul class="flex flex-col items-center justify-center h-full gap-6 -mt-16">
+        <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
+        <li><a href="#work-domains" class="mobile-nav-link" data-section="work-domains">Our Work</a></li>
+        <li><a href="#story" class="mobile-nav-link" data-section="story">Our Story</a></li>
+        <li><a href="#csr" class="mobile-nav-link" data-section="csr">CSR</a></li>
+        <li><a href="#products" class="mobile-nav-link" data-section="products">Products</a></li>
+        <li><a href="#donate" class="mobile-nav-link mobile-link-donate" data-section="donate">Donate</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
+        <li class="mt-4">
+          <button id="lang-toggle-mobile"
+            class="lang-toggle-btn text-sm font-semibold px-4 py-2 rounded-full border border-brand-light text-brand-light">EN
+            | हिं</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
+      <!-- SVG Pattern Overlay -->
+      <div class="hero-pattern absolute inset-0 z-0"></div>
+      <!-- Floating Particles -->
+      <div id="hero-particles" class="absolute inset-0 z-[1] pointer-events-none"></div>
+      <!-- Content -->
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 pb-16">
+        <h1 id="hero-headline"
+          class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-brand-cream leading-tight mb-2 animate-section">
+        </h1>
+        <p id="hero-headline2"
+          class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-light leading-tight mb-8 animate-section">
+        </p>
+        <p id="hero-sub"
+          class="font-body text-base sm:text-lg md:text-xl text-brand-cream/95 max-w-3xl mx-auto mb-12 leading-relaxed animate-section">
+        </p>
+        <div id="hero-ctas" class="flex flex-wrap items-center justify-center gap-4 animate-section"></div>
+      </div>
+      <!-- SVG Wave Divider -->
+      <div class="absolute bottom-0 left-0 right-0 z-10">
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"
+          preserveAspectRatio="none">
+          <path d="M0 40C240 80 480 10 720 50C960 90 1200 20 1440 60V100H0V40Z" fill="#6A8E4E" />
+        </svg>
+      </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="50000">0</h3>
-                    <p class="stat-label">Lives Impacted</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="150">0</h3>
-                    <p class="stat-label">Active Projects</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="25">0</h3>
-                    <p class="stat-label">Communities Served</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="5000">0</h3>
-                    <p class="stat-label">Volunteers</p>
-                </div>
-            </div>
+    <!-- ===== SECTION 2: IMPACT NUMBERS ===== -->
+    <section id="impact-numbers" class="bg-brand-green py-12 sm:py-16 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="grain-overlay"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div id="impact-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6 lg:gap-8">
+          <!-- Rendered by JS -->
         </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Ketma Welfare Foundation Team">
-                        <div class="image-overlay">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-badge">
-                        <span class="badge-year">Est. 2020</span>
-                        <span class="badge-text">Years of Service</span>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <span class="section-label">About Us</span>
-                    <h2 class="section-title">Building a Better Tomorrow Through Compassion</h2>
-                    <p class="about-text">
-                        Ketma Welfare Foundation is dedicated to creating sustainable change in underserved communities. 
-                        Through our comprehensive programs in education, healthcare, and community development, we empower 
-                        individuals to break the cycle of poverty and build brighter futures.
-                    </p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Transparent Operations</h4>
-                                <p>100% accountability in every donation and project</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Community-Driven</h4>
-                                <p>Working hand-in-hand with local communities</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Sustainable Impact</h4>
-                                <p>Creating long-term solutions, not temporary fixes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Join Our Mission</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+    <!-- ===== SECTION 3: ABOUT ===== -->
+    <section id="about" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="section-wave-top">
+        <svg viewBox="0 0 1440 60" fill="none" class="w-full" preserveAspectRatio="none">
+          <path d="M0 60V20C360 50 720 0 1080 30C1260 45 1380 15 1440 25V60H0Z" fill="#6A8E4E" />
+        </svg>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <!-- Text Column -->
+          <div class="animate-section">
+            <span class="section-label">WHO WE ARE</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-8">About Ketma</h2>
+            <div id="about-paragraphs" class="space-y-5 text-brand-dark/95 leading-relaxed"></div>
+            <blockquote id="about-quote"
+              class="mt-8 pl-6 border-l-4 border-brand-green italic text-brand-dark/90 font-medium text-lg">
+            </blockquote>
+          </div>
+          <!-- Illustration Column -->
+          <div class="animate-section flex items-center justify-center">
+            <div class="about-illustration relative w-full max-w-md aspect-square">
+              <svg viewBox="0 0 400 400" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract Surguja Map Illustration -->
+                <rect width="400" height="400" rx="20" fill="#2C473E" opacity="0.05" />
+                <circle cx="200" cy="200" r="150" fill="none" stroke="#6A8E4E" stroke-width="1" stroke-dasharray="8 4"
+                  opacity="0.3" />
+                <circle cx="200" cy="200" r="100" fill="none" stroke="#B0D182" stroke-width="1" stroke-dasharray="4 8"
+                  opacity="0.4" />
+                <!-- Topographic lines -->
+                <path d="M80 200C120 160 160 220 200 180C240 140 280 200 320 170" fill="none" stroke="#6A8E4E"
+                  stroke-width="1.5" opacity="0.3" />
+                <path d="M80 230C130 190 170 250 210 210C250 170 290 230 330 200" fill="none" stroke="#6A8E4E"
+                  stroke-width="1.5" opacity="0.25" />
+                <path d="M80 260C140 220 180 280 220 240C260 200 300 260 340 230" fill="none" stroke="#6A8E4E"
+                  stroke-width="1.5" opacity="0.2" />
+                <!-- Location markers -->
+                <g transform="translate(200,170)">
+                  <circle r="8" fill="#6A8E4E" />
+                  <circle r="4" fill="#B0D182" />
+                  <text y="-16" text-anchor="middle" fill="#2C473E" font-size="11" font-family="Montserrat"
+                    font-weight="600">Ambikapur</text>
+                </g>
+                <g transform="translate(280,260)">
+                  <circle r="5" fill="#6A8E4E" opacity="0.7" />
+                  <circle r="2.5" fill="#B0D182" />
+                  <text y="-12" text-anchor="middle" fill="#2C473E" font-size="9" font-family="Montserrat"
+                    font-weight="500">Naya Raipur</text>
+                </g>
+                <!-- Leaf decoration -->
+                <g transform="translate(130,120) scale(0.6)">
+                  <path d="M30 60C20 40 10 20 30 0C50 20 40 40 30 60Z" fill="#B0D182" opacity="0.5" />
+                  <line x1="30" y1="0" x2="30" y2="60" stroke="#6A8E4E" stroke-width="1" />
+                </g>
+                <g transform="translate(270,110) scale(0.5) rotate(20)">
+                  <path d="M30 60C20 40 10 20 30 0C50 20 40 40 30 60Z" fill="#6A8E4E" opacity="0.4" />
+                  <line x1="30" y1="0" x2="30" y2="60" stroke="#B0D182" stroke-width="1" />
+                </g>
+                <!-- Surguja label -->
+                <text x="200" y="340" text-anchor="middle" fill="#2C473E" font-size="16" font-family="Syne"
+                  letter-spacing="4" opacity="0.3">SURGUJA</text>
+                <!-- Field pattern (lemongrass rows) -->
+                <g transform="translate(140,270)" opacity="0.3">
+                  <line x1="0" y1="0" x2="0" y2="20" stroke="#6A8E4E" stroke-width="2" />
+                  <line x1="10" y1="0" x2="10" y2="18" stroke="#6A8E4E" stroke-width="2" />
+                  <line x1="20" y1="0" x2="20" y2="22" stroke="#6A8E4E" stroke-width="2" />
+                  <line x1="30" y1="0" x2="30" y2="17" stroke="#6A8E4E" stroke-width="2" />
+                  <line x1="40" y1="0" x2="40" y2="21" stroke="#6A8E4E" stroke-width="2" />
+                  <line x1="50" y1="0" x2="50" y2="19" stroke="#6A8E4E" stroke-width="2" />
+                  <line x1="60" y1="0" x2="60" y2="20" stroke="#6A8E4E" stroke-width="2" />
+                </g>
+                <!-- 110 Acres badge -->
+                <g transform="translate(310,140)">
+                  <rect x="-30" y="-12" width="60" height="24" rx="12" fill="#6A8E4E" />
+                  <text y="4" text-anchor="middle" fill="#F4F1EA" font-size="10" font-family="Montserrat"
+                    font-weight="700">110 Acres</text>
+                </g>
+              </svg>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Causes Section -->
-    <section class="causes" id="causes">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Causes</span>
-                <h2 class="section-title">Making a Difference Where It Matters Most</h2>
-                <p class="section-description">
-                    Explore our ongoing initiatives and be part of the change you wish to see in the world
-                </p>
-            </div>
-            <div class="causes-grid" id="causesGrid">
-                <!-- Causes will be dynamically loaded from JSON -->
-            </div>
+    <!-- ===== SECTION 4: THREE PILLARS ===== -->
+    <section id="pillars" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label">OUR FOUNDATION</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark">Three Pillars of Change</h2>
         </div>
+        <div id="pillars-grid" class="grid md:grid-cols-3 gap-8 lg:gap-10">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
     </section>
 
-    <!-- Impact Section -->
-    <section class="impact" id="impact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Impact</span>
-                <h2 class="section-title">Creating Ripples of Change</h2>
-            </div>
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Education Programs</h3>
-                    <p>Providing quality education and scholarships to underprivileged children, opening doors to brighter futures.</p>
-                    <ul class="impact-list">
-                        <li><i class="fas fa-check"></i> 10,000+ students supported</li>
-                        <li><i class="fas fa-check"></i> 50+ schools built</li>
-                        <li><i class="fas fa-check"></i> 500+ scholarships awarded</li>
-                    </ul>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare Initiatives</h3>
-                    <p>Delivering essential medical care and health awareness to communities lacking access to healthcare facilities.</p>
-                    <ul class="impact-list">
-                        <li><i class="fas fa-check"></i> 100+ medical camps organized</li>
-                        <li><i class="fas fa-check"></i> 25,000+ patients treated</li>
-                        <li><i class="fas fa-check"></i> 15 mobile health units</li>
-                    </ul>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Community Development</h3>
-                    <p>Building infrastructure and empowering communities with skills training and sustainable livelihood programs.</p>
-                    <ul class="impact-list">
-                        <li><i class="fas fa-check"></i> 30+ villages transformed</li>
-                        <li><i class="fas fa-check"></i> 2,000+ families empowered</li>
-                        <li><i class="fas fa-check"></i> 100+ wells constructed</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- ===== SECTION 5: WORK DOMAINS ===== -->
+    <section id="work-domains" class="py-20 sm:py-28 bg-brand-dark relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="grain-overlay"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label section-label-light">OUR MANDATES</span>
+          <h2 id="domains-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-cream"></h2>
         </div>
+        <div id="domains-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+      <!-- Wave Divider -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" class="w-full" preserveAspectRatio="none">
+          <path d="M0 30C320 60 640 10 960 40C1120 55 1300 20 1440 35V80H0V30Z" fill="#F4F1EA" />
+        </svg>
+      </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team" id="team">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Team</span>
-                <h2 class="section-title">Meet the Hearts Behind Our Mission</h2>
-                <p class="section-description">
-                    Dedicated professionals working tirelessly to create meaningful change
-                </p>
-            </div>
-            <div class="team-grid" id="teamGrid">
-                <!-- Team members will be dynamically loaded from JSON -->
-            </div>
+    <!-- ===== SECTION 6: OUR STORY / TIMELINE ===== -->
+    <section id="story" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label">OUR JOURNEY</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-8">Our Story</h2>
+          <div id="story-intro" class="max-w-3xl mx-auto text-brand-dark/95 space-y-4 leading-relaxed"></div>
         </div>
+        <!-- Timeline -->
+        <div id="timeline" class="relative mt-16">
+          <div
+            class="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-brand-green/30 transform md:-translate-x-px">
+          </div>
+          <div id="timeline-items" class="space-y-12">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <!-- President Quote -->
+        <div id="president-quote" class="mt-20 animate-section">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Testimonials</span>
-                <h2 class="section-title" style="color: var(--secondary-light);">Stories That Inspire Us</h2>
-            </div>
-            <div class="testimonials-slider" id="testimonialsSlider">
-                <!-- Testimonials will be dynamically loaded from JSON -->
-            </div>
-            <div class="slider-controls">
-                <button class="slider-btn" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slider-btn" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
+    <!-- ===== SECTION 7: VISION & MISSION ===== -->
+    <section id="vision-mission" class="relative overflow-hidden">
+      <div class="grid lg:grid-cols-2">
+        <!-- Vision -->
+        <div class="bg-brand-dark py-20 sm:py-28 px-6 sm:px-12 lg:px-16 flex items-center">
+          <div class="max-w-lg mx-auto animate-section">
+            <span class="section-label section-label-light">OUR NORTH STAR</span>
+            <h2 class="font-display text-3xl sm:text-4xl text-brand-cream mb-8">Vision</h2>
+            <p id="vision-text" class="text-brand-cream/85 text-lg leading-relaxed"></p>
+          </div>
         </div>
+        <!-- Mission -->
+        <div class="bg-brand-cream py-20 sm:py-28 px-6 sm:px-12 lg:px-16">
+          <div class="max-w-lg mx-auto animate-section">
+            <span class="section-label">OUR COMMITMENT</span>
+            <h2 class="font-display text-3xl sm:text-4xl text-brand-dark mb-6">Mission</h2>
+            <p id="mission-intro" class="text-brand-dark/95 mb-8 leading-relaxed"></p>
+            <ol id="mission-pillars" class="space-y-4">
+              <!-- Rendered by JS -->
+            </ol>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-label">Get In Touch</span>
-                    <h2 class="section-title">Let's Work Together</h2>
-                    <p class="contact-description">
-                        Have questions or want to get involved? We'd love to hear from you. 
-                        Reach out and let's make a difference together.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Our Location</h4>
-                                <p>123 Welfare Street, Community Center<br>New Delhi, India - 110001</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Phone Number</h4>
-                                <p>+91 12345 67890<br>+91 98765 43210</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email Address</h4>
-                                <p>info@ketmawelfare.org<br>support@ketmawelfare.org</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="firstName" required>
-                                <label for="firstName">First Name</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="lastName" required>
-                                <label for="lastName">Last Name</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required>
-                            <label for="email">Email Address</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" required>
-                            <label for="phone">Phone Number</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" required></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                    <div class="form-success" id="formSuccess">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Thank you! Your message has been sent successfully.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ===== SECTION 8: FLAGSHIP INITIATIVE ===== -->
+    <section id="flagship" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label">FLAGSHIP PROGRAM</span>
+          <h2 id="flagship-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-4"></h2>
+          <p id="flagship-subtitle" class="text-brand-dark/90 text-lg max-w-2xl mx-auto"></p>
         </div>
+        <div id="flagship-phases" class="space-y-12">
+          <!-- Rendered by JS -->
+        </div>
+        <!-- Cumulative Dashboard -->
+        <div id="cumulative-dashboard" class="mt-20 animate-section">
+          <h3 class="font-display text-2xl sm:text-3xl text-brand-dark text-center mb-10" id="dashboard-title"></h3>
+          <div id="dashboard-metrics" class="grid grid-cols-2 md:grid-cols-4 gap-5">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Donate Section -->
-    <section class="donate" id="donate">
-        <div class="container">
-            <div class="donate-content">
-                <h2>Your Donation Can Change Lives</h2>
-                <p>Every contribution, no matter how small, makes a significant impact on the lives we touch</p>
-                <div class="donate-amounts">
-                    <button class="amount-btn" data-amount="500">₹500</button>
-                    <button class="amount-btn" data-amount="1000">₹1,000</button>
-                    <button class="amount-btn" data-amount="2500">₹2,500</button>
-                    <button class="amount-btn" data-amount="5000">₹5,000</button>
-                    <button class="amount-btn active" data-amount="custom">Custom Amount</button>
-                </div>
-                <div class="donate-input">
-                    <span class="currency">₹</span>
-                    <input type="number" id="donateAmount" placeholder="Enter amount" value="1000">
-                </div>
-                <button class="btn btn-donate-large">
-                    <i class="fas fa-heart"></i>
-                    <span>Donate Now</span>
-                </button>
-                <p class="donate-note">
-                    <i class="fas fa-shield-alt"></i>
-                    100% secure payment • Tax deductible under 80G
-                </p>
-            </div>
+    <!-- ===== SECTION 9: LEGAL CREDENTIALS ===== -->
+    <section id="credentials" class="py-20 sm:py-28 bg-brand-dark relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="grain-overlay"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label section-label-light">INSTITUTIONAL IDENTITY</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-cream">Legal Identity & Credentials</h2>
         </div>
+        <div id="credentials-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <i class="fas fa-hands-helping"></i>
-                        <span>Ketma Welfare Foundation</span>
-                    </div>
-                    <p class="footer-description">
-                        Dedicated to creating sustainable change and empowering communities 
-                        through education, healthcare, and development programs.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#causes">Our Causes</a></li>
-                        <li><a href="#impact">Impact</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Get Involved</h4>
-                    <ul class="footer-links">
-                        <li><a href="#donate">Make a Donation</a></li>
-                        <li><a href="#">Become a Volunteer</a></li>
-                        <li><a href="#">Corporate Partnership</a></li>
-                        <li><a href="#">Fundraise for Us</a></li>
-                        <li><a href="#">Career Opportunities</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to get updates on our latest projects and impact stories.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Ketma Welfare Foundation. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
-                </div>
-            </div>
+    <!-- ===== SECTION 10: GOVERNING COUNCIL ===== -->
+    <section id="council" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6 animate-section">
+          <span class="section-label">LEADERSHIP</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-6">Governing Council</h2>
+          <p id="council-intro" class="text-brand-dark/90 max-w-3xl mx-auto text-lg"></p>
         </div>
-    </footer>
+        <div id="council-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- ===== SECTION 11: CSR PARTNERSHIPS ===== -->
+    <section id="csr" class="py-20 sm:py-28 bg-brand-dark relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="grain-overlay"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label section-label-light">CSR & PARTNERSHIPS</span>
+          <h2 id="csr-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-cream mb-6"></h2>
+          <p id="csr-intro" class="text-brand-cream/90 max-w-3xl mx-auto text-lg"></p>
+        </div>
 
-    <script src="js/main.js"></script>
+        <!-- Why Partner -->
+        <div class="mb-16 animate-section">
+          <h3 class="font-display text-2xl text-brand-light mb-8 text-center">Why Partner With Ketma</h3>
+          <div id="csr-why-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Partnership Models -->
+        <div class="mb-16 animate-section">
+          <h3 class="font-display text-2xl text-brand-light mb-8 text-center">Partnership Models</h3>
+          <div id="csr-models-grid" class="grid sm:grid-cols-2 gap-6">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Implementation Partners -->
+        <div class="mb-12 animate-section">
+          <h3 class="font-display text-2xl text-brand-light mb-8 text-center">Implementation Partners</h3>
+          <div id="csr-partners-grid" class="flex flex-wrap justify-center gap-6">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center animate-section">
+          <a href="#contact"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-brand-green text-brand-cream font-semibold rounded-2xl hover:bg-brand-light hover:text-brand-dark transition-all text-lg"
+            data-gtm="csr_start_conversation">
+            Start a Conversation →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 12: GOVERNMENT ENGAGEMENT ===== -->
+    <section id="government" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 animate-section">
+          <span class="section-label">POLICY & GOVERNANCE</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark">Government Engagement</h2>
+        </div>
+        <div id="gov-paragraphs" class="space-y-5 text-brand-dark/95 leading-relaxed text-center animate-section"></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 13: PRODUCTS ===== -->
+    <section id="products" class="py-20 sm:py-28 bg-brand-cream relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label">FROM SURGUJA'S FIELDS</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-4">Our Products</h2>
+          <p id="products-tagline" class="text-brand-green font-semibold text-lg tracking-wide"></p>
+        </div>
+        <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <!-- Rendered by JS -->
+        </div>
+        <p id="products-note"
+          class="mt-12 text-center text-brand-dark/90 italic text-lg max-w-2xl mx-auto animate-section"></p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 14: DONATE ===== -->
+    <section id="donate" class="py-20 sm:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-green/10 to-brand-light/20"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label">MAKE AN IMPACT</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-6">Donate — Invest in a Living
+            Future</h2>
+          <p id="donate-intro" class="text-brand-dark/95 text-lg max-w-3xl mx-auto leading-relaxed"></p>
+        </div>
+
+        <!-- Donation Tiers -->
+        <div id="donate-tiers" class="flex flex-wrap justify-center gap-6 mb-16">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Bank & UPI Details -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12 animate-section">
+          <div id="bank-details" class="bg-brand-cream rounded-2xl p-8 shadow-sm border border-brand-green/10"></div>
+          <div id="upi-details" class="bg-brand-cream rounded-2xl p-8 shadow-sm border border-brand-green/10"></div>
+        </div>
+
+        <!-- Tax Note -->
+        <p id="donate-tax-note" class="text-center text-brand-dark/90 font-medium animate-section"></p>
+        <p id="donate-transparency" class="text-center text-brand-dark/85 text-sm mt-2 animate-section"></p>
+
+        <!-- Donate CTA -->
+        <div class="text-center mt-10 animate-section">
+          <a href="mailto:support@ketmawelfarefoundation.org?subject=Donation%20Inquiry"
+            class="inline-flex items-center gap-2 px-10 py-4 bg-brand-green text-brand-cream font-bold rounded-2xl text-lg hover:bg-brand-dark transition-all shadow-lg"
+            data-gtm="donate_cta_main">
+            ❤️ Donate Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 15: VOLUNTEER ===== -->
+    <section id="volunteer" class="py-20 sm:py-28 bg-brand-dark relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="grain-overlay"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label section-label-light">JOIN THE MISSION</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-cream mb-4">Volunteer With Us</h2>
+          <p id="volunteer-intro" class="text-brand-cream/90 text-lg italic"></p>
+        </div>
+        <div id="volunteer-roles" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <!-- Rendered by JS -->
+        </div>
+        <!-- Other Ways -->
+        <div class="animate-section">
+          <h3 class="font-display text-2xl text-brand-light mb-6 text-center">Other Ways to Help</h3>
+          <ul id="volunteer-other" class="max-w-2xl mx-auto space-y-3">
+            <!-- Rendered by JS -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 16: PRESS RELEASE ===== -->
+    <section id="press" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 animate-section">
+          <span class="section-label">MEDIA</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark">In the News / Press</h2>
+        </div>
+        <!-- Accordion -->
+        <div id="press-accordion" class="animate-section">
+          <button id="press-toggle"
+            class="w-full flex items-center justify-between bg-brand-dark text-brand-cream px-8 py-5 rounded-2xl hover:bg-brand-dark/90 transition-all group"
+            aria-expanded="false" aria-controls="press-content">
+            <span class="font-display text-lg tracking-wide">📰 Read Full Press Release</span>
+            <svg class="w-5 h-5 transition-transform duration-300 group-[.expanded]:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div id="press-content" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <div class="bg-brand-cream border-2 border-brand-dark/10 rounded-b-2xl p-8 sm:p-12">
+              <div id="press-body" class="prose prose-lg max-w-none"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Key Messages -->
+        <div class="mt-12 animate-section">
+          <h3 class="font-display text-2xl text-brand-dark mb-6">Key Messages for Media</h3>
+          <ul id="press-key-messages" class="space-y-3">
+            <!-- Rendered by JS -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 17: CONTACT ===== -->
+    <section id="contact" class="py-20 sm:py-28 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-section">
+          <span class="section-label">REACH OUT</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-4">Get In Touch</h2>
+          <p id="contact-intro" class="text-brand-dark/90 max-w-2xl mx-auto text-lg"></p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <!-- Contact Form -->
+          <div class="animate-section">
+            <form id="contact-form" class="space-y-5" novalidate>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="cf-name" class="block text-sm font-semibold text-brand-dark mb-2">Full Name *</label>
+                  <input type="text" id="cf-name" name="name" required class="form-input" placeholder="Your name">
+                </div>
+                <div>
+                  <label for="cf-org" class="block text-sm font-semibold text-brand-dark mb-2">Organization</label>
+                  <input type="text" id="cf-org" name="organization" class="form-input" placeholder="Company / NGO">
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="cf-email" class="block text-sm font-semibold text-brand-dark mb-2">Email *</label>
+                  <input type="email" id="cf-email" name="email" required class="form-input"
+                    placeholder="you@example.com">
+                </div>
+                <div>
+                  <label for="cf-phone" class="block text-sm font-semibold text-brand-dark mb-2">Phone</label>
+                  <input type="tel" id="cf-phone" name="phone" class="form-input" placeholder="+91-XXXXXXXXXX">
+                </div>
+              </div>
+              <div>
+                <label for="cf-subject" class="block text-sm font-semibold text-brand-dark mb-2">Subject *</label>
+                <select id="cf-subject" name="subject" required class="form-input">
+                  <option value="">Select a subject...</option>
+                </select>
+              </div>
+              <div>
+                <label for="cf-message" class="block text-sm font-semibold text-brand-dark mb-2">Message *</label>
+                <textarea id="cf-message" name="message" rows="5" required class="form-input resize-none"
+                  placeholder="How can we help?"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full sm:w-auto px-10 py-4 bg-brand-green text-brand-cream font-bold rounded-2xl hover:bg-brand-dark transition-all text-lg"
+                data-gtm="contact_form_submit">
+                Send Message →
+              </button>
+              <div id="form-status" class="hidden mt-4 p-4 rounded-xl text-sm font-medium"></div>
+            </form>
+          </div>
+          <!-- Contact Info -->
+          <div class="animate-section">
+            <div class="space-y-8">
+              <div id="contact-info-block" class="space-y-6">
+                <!-- Rendered by JS -->
+              </div>
+              <!-- Map -->
+              <div class="rounded-2xl overflow-hidden border-2 border-brand-green/10 shadow-sm">
+                <iframe id="contact-map" src="" width="100%" height="280" style="border:0;" allowfullscreen=""
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  title="Ketma Welfare Foundation location"></iframe>
+              </div>
+              <!-- Social Links -->
+              <div>
+                <h4 class="font-display text-lg text-brand-dark mb-4">Follow Us</h4>
+                <div id="social-links" class="flex gap-4">
+                  <!-- Rendered by JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="bg-brand-dark pt-16 pb-8 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="grain-overlay"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Logo & Tagline -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/logo/logo-transparent.png" alt="Ketma Welfare Foundation Logo"
+              class="w-[100px] h-[100px] object-contain scale-110" loading="lazy">
+            <span class="font-display text-brand-cream text-lg tracking-wider">KETMA</span>
+          </div>
+          <p id="footer-tagline" class="text-brand-cream/85 text-sm leading-relaxed"></p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display text-brand-light text-lg mb-4">Quick Links</h4>
+          <ul id="footer-links" class="space-y-2">
+            <!-- Rendered by JS -->
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div>
+          <h4 class="font-display text-brand-light text-lg mb-4">Legal</h4>
+          <div id="footer-legal" class="space-y-2 text-brand-cream/85 text-sm">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <!-- Contact Brief -->
+        <div>
+          <h4 class="font-display text-brand-light text-lg mb-4">Contact</h4>
+          <div id="footer-contact" class="space-y-2 text-brand-cream/85 text-sm">
+            <!-- Rendered by JS -->
+          </div>
+          <div id="footer-social" class="flex gap-3 mt-4">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-brand-cream/10 pt-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p id="footer-copyright" class="text-brand-cream/50 text-sm"></p>
+          <p id="footer-disclaimer" class="text-brand-cream/40 text-xs max-w-md text-center sm:text-right"></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="main.js"></script>
 </body>
+
 </html>
