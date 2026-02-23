@@ -417,43 +417,31 @@
         "name": "Mr. Ankit Soni",
         "role": "President",
         "expertise": "Mining Engineer | Remote Sensing & GIS | Environmental Science | Geospatial Analysis",
-        "photo": ""
+        "photo": "assets/candidates/ankit.png"
       },
       {
-        "name": "Mr. Rajesh Kumar Gupta",
+        "name": "Mr. Sanjay Kumar Soni",
         "role": "Vice President",
         "expertise": "Community Development | Rural Administration | Institutional Management",
-        "photo": ""
+        "photo": "assets/candidates/sanjay.png"
       },
       {
-        "name": "Mrs. Savitri Soni",
+        "name": "Miss. Anukranti Rajwade",
         "role": "Secretary",
         "expertise": "Social Work | Women's Empowerment | Community Health | SHG Development",
-        "photo": ""
+        "photo": "assets/candidates/anukranti.png"
       },
       {
-        "name": "Mr. Deepak Agrawal",
+        "name": "Mr. Tushar Soni",
         "role": "Treasurer",
         "expertise": "Financial Management | Business Administration | Rural Enterprise Development",
-        "photo": ""
+        "photo": "assets/candidates/tushar.png"
       },
       {
-        "name": "Mr. Vikram Singh Thakur",
-        "role": "Member",
+        "name": "Mr. Poshan lal Padoti",
+        "role": "Joint Secretary",
         "expertise": "Geology | Mining | Environmental Impact Assessment | Land Rehabilitation",
-        "photo": ""
-      },
-      {
-        "name": "Mrs. Anita Pandey",
-        "role": "Member",
-        "expertise": "Education | Skill Development | Youth Programs | Digital Literacy",
-        "photo": ""
-      },
-      {
-        "name": "Mr. Suresh Patel",
-        "role": "Member",
-        "expertise": "Organic Agriculture | Sustainable Farming | Market Linkages | Value Chain Development",
-        "photo": ""
+        "photo": "assets/candidates/poshan.png"
       }
     ]
   },
@@ -592,7 +580,7 @@
       }
     ],
     "bankDetails": {
-      "bankName": "Centurion Bank Of India",
+      "bankName": "Central Bank Of India",
       "accountName": "Ketma Welfare Foundation",
       "accountNumber": "5903560664",
       "ifsc": "CBIN0282526",

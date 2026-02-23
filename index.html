@@ -111,6 +111,34 @@
 
 <body class="font-body bg-brand-cream text-brand-dark overflow-x-hidden">
 
+  <!-- ===== MOBILE MENU OVERLAY ===== -->
+  <div id="mobile-menu"
+    class="lg:hidden fixed inset-0 bg-brand-dark z-[100] transform translate-x-full transition-transform duration-400 ease-in-out overflow-y-auto">
+    <div class="flex justify-end p-6">
+      <button id="mobile-menu-close" class="text-brand-cream p-2" aria-label="Close menu">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col items-center pb-20 gap-8 min-h-[calc(100%-80px)]">
+      <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
+      <li><a href="#work-domains" class="mobile-nav-link" data-section="work-domains">Our Work</a></li>
+      <li><a href="#story" class="mobile-nav-link" data-section="story">Our Story</a></li>
+      <li><a href="#csr" class="mobile-nav-link" data-section="csr">CSR</a></li>
+      <li><a href="#products" class="mobile-nav-link" data-section="products">Products</a></li>
+      <li><a href="#donate" class="mobile-nav-link mobile-link-donate" data-section="donate">Donate</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
+      <li class="mt-4">
+        <button id="lang-toggle-mobile"
+          class="lang-toggle-btn text-sm font-semibold px-6 py-3 rounded-full border border-brand-light text-brand-light hover:bg-brand-light hover:text-brand-dark transition-all">EN
+          | हिं</button>
+      </li>
+    </ul>
+  </div>
+
   <!-- ===== LOADING SCREEN ===== -->
   <div id="loading-screen"
     class="fixed inset-0 z-[9999] flex items-center justify-center bg-brand-dark transition-opacity duration-700"
@@ -207,24 +235,7 @@
       </button>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-      class="lg:hidden fixed inset-0 top-16 bg-brand-dark z-[80] transform translate-x-full transition-transform duration-400 ease-in-out">
-      <ul class="flex flex-col items-center justify-center h-full gap-6 -mt-16">
-        <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
-        <li><a href="#work-domains" class="mobile-nav-link" data-section="work-domains">Our Work</a></li>
-        <li><a href="#story" class="mobile-nav-link" data-section="story">Our Story</a></li>
-        <li><a href="#csr" class="mobile-nav-link" data-section="csr">CSR</a></li>
-        <li><a href="#products" class="mobile-nav-link" data-section="products">Products</a></li>
-        <li><a href="#donate" class="mobile-nav-link mobile-link-donate" data-section="donate">Donate</a></li>
-        <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
-        <li class="mt-4">
-          <button id="lang-toggle-mobile"
-            class="lang-toggle-btn text-sm font-semibold px-4 py-2 rounded-full border border-brand-light text-brand-light">EN
-            | हिं</button>
-        </li>
-      </ul>
-    </div>
+    </nav>
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->

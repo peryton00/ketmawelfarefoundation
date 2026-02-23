@@ -305,9 +305,14 @@
 
     const html = gc.members.map((m, i) => {
       const initials = m.name.split(' ').map(w => w[0]).join('').substring(0, 2);
+      const isPhoto = m.photo && m.photo.trim() !== "";
+      const avatarHTML = isPhoto
+        ? `<div class="council-avatar photo-style"><img src="${m.photo}" alt="${m.name}" class="w-full h-full object-cover rounded-full"></div>`
+        : `<div class="council-avatar">${initials}</div>`;
+
       return `
         <div class="council-card animate-section" style="transition-delay: ${i * 80}ms">
-          <div class="council-avatar">${initials}</div>
+          ${avatarHTML}
           <h4 class="font-display text-lg text-brand-dark mb-1">${m.name}</h4>
           <p class="text-brand-green font-semibold text-sm mb-2">${m.role}</p>
           <p class="text-brand-dark/100 text-xs leading-relaxed">${m.expertise}</p>
@@ -590,11 +595,13 @@
         $mobileMenu.removeClass('translate-x-0').addClass('translate-x-full');
         $mobileBtn.removeClass('hamburger-open');
         $mobileBtn.attr('aria-expanded', 'false');
+        $navbar.removeClass('mobile-menu-active');
         $('body').removeClass('overflow-hidden');
       } else {
         $mobileMenu.removeClass('translate-x-full').addClass('translate-x-0');
         $mobileBtn.addClass('hamburger-open');
         $mobileBtn.attr('aria-expanded', 'true');
+        $navbar.addClass('mobile-menu-active');
         $('body').addClass('overflow-hidden');
       }
     });
@@ -604,6 +611,16 @@
       $mobileMenu.removeClass('translate-x-0').addClass('translate-x-full');
       $mobileBtn.removeClass('hamburger-open');
       $mobileBtn.attr('aria-expanded', 'false');
+      $navbar.removeClass('mobile-menu-active');
+      $('body').removeClass('overflow-hidden');
+    });
+
+    // Close button in mobile menu
+    $('#mobile-menu-close').on('click', function () {
+      $mobileMenu.removeClass('translate-x-0').addClass('translate-x-full');
+      $mobileBtn.removeClass('hamburger-open');
+      $mobileBtn.attr('aria-expanded', 'false');
+      $navbar.removeClass('mobile-menu-active');
       $('body').removeClass('overflow-hidden');
     });
 
